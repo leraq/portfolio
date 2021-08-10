@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -32,5 +34,15 @@ module.exports = {
       },
       __key: "pages",
     },
+    {
+      resolve: "gatsby-plugin-alias-imports",
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, 'src/components'),
+          "@images": path.resolve(__dirname, 'src/images'),
+          "@pages": path.resolve(__dirname, 'src/pages')
+        },
+      }
+    }
   ],
 };
