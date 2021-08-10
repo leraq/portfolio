@@ -2,8 +2,11 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "portfolio",
+    title: 'Leon Delaimy',
+    description:
+      'Leon Delaimy: software engineer.',
+    siteUrl: 'https://leondelaimy.com', // No trailing slash allowed!
+    image: '', // Path to your image you placed in the 'static' folder
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -12,7 +15,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/me.jpg",
       },
     },
     "gatsby-plugin-mdx",
