@@ -13,6 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "prepare": "husky install",
     "test": "yarn type-check && yarn lint",
     "lint": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
     "type-check": "tsc --pretty"
@@ -21,11 +22,6 @@
     "*.{js,ts,jsx,tsx}": [
       "eslint --fix"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn type-check && yarn lint-staged"
-    }
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
