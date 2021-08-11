@@ -4,8 +4,6 @@
 
 My personal website.
 
-<br/>
-
 ### Color Reference
 
 | Color      | Hex                                                                |
