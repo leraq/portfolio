@@ -9,7 +9,7 @@ type HeadProps = {
   image?: string
 }
 
-// search engine optimization: https://www.gatsbyjs.com/docs/add-seo-component/
+// search engine optimization
 export const Head: React.FC<HeadProps> = ({ title, description, image }) => {
   const { pathname } = useLocation()
 

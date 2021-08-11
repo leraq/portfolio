@@ -5,7 +5,7 @@ import { Layout } from '@components'
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <div>Hello World!</div>
+      <h1>Hello World!</h1>
     </Layout>
   )
 }
