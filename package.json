@@ -14,8 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prepare": "husky install",
-    "test": "yarn type-check && yarn lint",
-    "lint": "eslint . --ext .js,.ts,.jsx,.tsx --fix",
+    "ci": "yarn type-check && yarn lint",
+    "lint": "eslint ./src --ext .ts,.tsx",
     "type-check": "tsc --pretty"
   },
   "lint-staged": {
