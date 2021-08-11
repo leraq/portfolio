@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "esnext",
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
@@ -14,7 +15,9 @@
     "paths": {
       "@components": ["src/components"],
       "@images": ["src/images"],
-      "@pages": ["src/pages"]
+      "@pages": ["src/pages"],
+      "@styles": ["src/styles"]
     }
-  }
+  },
+  "include": ["src/**/*"]
 }

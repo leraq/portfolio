@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Head, GlobalStyles, theme } from '@components'
+import { Head } from '@components'
+import { Container, GlobalStyles, theme } from '@styles'
 import { ThemeProvider } from 'styled-components'
 
 export const Layout: React.FC = ({ children }) => {
