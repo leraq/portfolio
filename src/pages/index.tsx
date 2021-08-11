@@ -2,7 +2,7 @@ import React from 'react'
 import { PageProps } from 'gatsby'
 import { Layout } from '@components'
 
-const IndexPage = (props: PageProps) => {
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div>Hello World!</div>

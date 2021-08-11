@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-    "baseUrl": "./",
-    "esModuleInterop": true,
-    "target": "es6",
     "module": "commonjs",
-    "jsx": "react",
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
     "paths": {
       "@components": ["src/components"],
       "@images": ["src/images"],
       "@pages": ["src/pages"]
     }
-  },
-  "exclude": ["node_modules"]
+  }
 }

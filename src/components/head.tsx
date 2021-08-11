@@ -1,15 +1,17 @@
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { useLocation } from '@reach/router'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+type HeadProps = {
+  title?: string
+  description?: string
+  image?: string
+}
 
-export const Head = ({
-  title = null,
-  description = null,
-  image = null
-}) => {
-  const { pathname } = useLocation();
+// search engine optimization: https://www.gatsbyjs.com/docs/add-seo-component/
+export const Head: React.FC<HeadProps> = ({ title, description, image }) => {
+  const { pathname } = useLocation()
 
   const { site } = useStaticQuery(
     graphql`
@@ -23,22 +25,17 @@ export const Head = ({
           }
         }
       }
-    `,
-  );
+    `
+  )
 
-  const {
-    defaultTitle,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
+  const { defaultTitle, defaultDescription, siteUrl, defaultImage } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
-  };
+  }
 
   return (
     <Helmet title={title} defaultTitle={seo.title} titleTemplate={`%s | ${defaultTitle}`}>
@@ -53,5 +50,5 @@ export const Head = ({
       <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
     </Helmet>
-  );
-};
+  )
+}
