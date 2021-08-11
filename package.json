@@ -14,7 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "prepare": "husky install",
-    "ci": "yarn type-check && yarn lint",
+    "test": "yarn type-check && yarn lint",
     "lint": "eslint ./src --ext .ts,.tsx",
     "type-check": "tsc --pretty"
   },
