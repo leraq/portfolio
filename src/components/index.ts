@@ -1,3 +1,5 @@
 export * from './layout'
 export * from './head'
 export * from './styles/container'
+export * from './styles/theme'
+export * from './styles/global'
