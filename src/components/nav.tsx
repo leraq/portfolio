@@ -23,7 +23,7 @@ const routes = [
 
 const CVLink = () => {
   return (
-    <a className="cv-button" href="/CV_Leon_Delaimy_PDF.pdf" target="_blank" rel="noopener noreferrer">
+    <a className="cv-button" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
       VIEW CV
     </a>
   )
