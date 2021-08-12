@@ -57,6 +57,10 @@ const StyledLinks = styled.div`
     font-size: 15px;
   }
 
+  span {
+    color: ${({ theme }) => theme.colors.pastelRed};
+  }
+
   .cv-button {
     border-bottom: 1px solid ${({ theme }) => theme.colors.pastelRed};
   }
@@ -70,9 +74,12 @@ export const Nav: React.FC = () => {
           <ul>
             {routes.map(({ name, url }, i) => {
               return (
-                <li key={i}>
-                  <Link to={url}>{name}</Link>
-                </li>
+                <>
+                  <li key={i}>
+                    <Link to={url}>{name}</Link>
+                  </li>
+                  <span>|</span>
+                </>
               )
             })}
             <CVLink />
