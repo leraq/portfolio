@@ -23,15 +23,18 @@ const routes = [
 
 const CVLink = () => {
   return (
-    <a className="cv-button" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-      CV
+    <a className="cv-button" href="/CV_Leon_Delaimy_PDF.pdf" target="_blank" rel="noopener noreferrer">
+      VIEW CV
     </a>
   )
 }
 
 const StyledHeader = styled.header`
   padding: 15px 200px;
-  border-bottom: 1px dotted ${({ theme }) => theme.colors.lightGrey};
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
 `
 
 const StyledNav = styled.nav``
@@ -52,6 +55,10 @@ const StyledLinks = styled.div`
   li {
     font-weight: 400;
     font-size: 15px;
+  }
+
+  .cv-button {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.pastelRed};
   }
 `
 
