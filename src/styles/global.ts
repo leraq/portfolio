@@ -16,15 +16,22 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     width: 100%;
     min-height: 100%;
     overflow-x: hidden;
-    background-color: ${props => props.theme.background};
-    font-family: ${props => props.theme.font};
-    color: ${props => props.theme.colors.grey};
+    background-color: ${({ theme }) => theme.background};
+    font-family: ${({ theme }) => theme.font};
+    color: ${({ theme }) => theme.colors.lightGrey};
   }
 
   main {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1600px;
-    min-height: 90vh;
+    min-height: 100vh;
   }
+
+  a {
+    color: ${({ theme }) => theme.colors.zimaBlue};
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:hover,
+    &:focus {
+      color: ${({ theme }) => theme.colors.pastelRed};
+    }
+
 `
