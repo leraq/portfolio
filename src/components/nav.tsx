@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { StyledButton } from '@styles'
 
 const routes = [
   {
@@ -21,70 +22,47 @@ const routes = [
   },
 ]
 
-const CVLink = () => {
-  return (
-    <a className="cv-button" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-      VIEW CV
-    </a>
-  )
-}
-
-const StyledHeader = styled.header`
-  padding: 15px 200px;
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-`
-
-const StyledNav = styled.nav``
-
-const StyledLinks = styled.div`
-  @media (max-width: 768px) {
-    display: none;
+const StyledLinks = styled(StyledButton)`
+  .menu ul li {
+    font-size: 20px;
+    text-shadow: none;
+    border-color: transparent;
   }
 
-  ul {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  li {
-    font-weight: 400;
-    font-size: 15px;
-  }
-
-  span {
-    color: ${({ theme }) => theme.colors.pastelRed};
-  }
-
-  .cv-button {
-    border-bottom: 1px solid ${({ theme }) => theme.colors.pastelRed};
+  .menu ul li::after {
+    border-color: transparent;
   }
 `
 
 export const Nav: React.FC = () => {
   return (
-    <StyledHeader>
-      <StyledNav>
-        <StyledLinks>
+    <nav>
+      <StyledLinks>
+        <div className="menu">
           <ul>
             {routes.map(({ name, url }, i) => {
               return (
-                <Fragment key={i.toString()}>
-                  <li>
-                    <Link to={url}>{name}</Link>
-                  </li>
-                  <span>|</span>
-                </Fragment>
+                <li key={i.toString()}>
+                  <Link className="link" to={url}>
+                    {name}
+                  </Link>
+                </li>
               )
             })}
             <CVLink />
           </ul>
-        </StyledLinks>
-      </StyledNav>
-    </StyledHeader>
+        </div>
+      </StyledLinks>
+    </nav>
+  )
+}
+
+const CVLink = () => {
+  return (
+    <li>
+      <a className="link" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+        VIEW CV
+      </a>
+    </li>
   )
 }

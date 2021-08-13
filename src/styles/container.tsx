@@ -5,5 +5,4 @@ export const Container = styled.div`
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
   min-height: 100vh;
-  text-align: center;
 `

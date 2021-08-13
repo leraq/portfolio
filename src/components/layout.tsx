@@ -1,7 +1,7 @@
 import React from 'react'
-import { SEO, Nav } from '@components'
-import { GlobalStyles, Container, theme } from '@styles'
 import { ThemeProvider } from 'styled-components'
+import { SEO } from '@components'
+import { GlobalStyles, Container, theme } from '@styles'
 
 export const Layout: React.FC = ({ children }) => {
   return (
@@ -9,11 +9,7 @@ export const Layout: React.FC = ({ children }) => {
       <SEO />
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Container>
-          <Nav />
-          <main>{children}</main>
-          <footer>footer</footer>
-        </Container>
+        <Container>{children}</Container>
       </ThemeProvider>
     </>
   )
