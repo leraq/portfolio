@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
@@ -34,7 +34,6 @@ const StyledHeader = styled.header`
   @media (max-width: 768px) {
     padding: 15px;
   }
-  border-bottom: 1px solid ${({ theme }) => theme.colors.lightGrey};
 `
 
 const StyledNav = styled.nav``
@@ -74,12 +73,12 @@ export const Nav: React.FC = () => {
           <ul>
             {routes.map(({ name, url }, i) => {
               return (
-                <>
-                  <li key={i}>
+                <Fragment key={i.toString()}>
+                  <li>
                     <Link to={url}>{name}</Link>
                   </li>
                   <span>|</span>
-                </>
+                </Fragment>
               )
             })}
             <CVLink />
