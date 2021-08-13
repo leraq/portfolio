@@ -21,6 +21,12 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     padding: 10px;
   }
 
+  a {
+    display:block;
+    width:100%;
+    height:100%;
+  }
+
   header {
     margin: 0 auto;
   }
