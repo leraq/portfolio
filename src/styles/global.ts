@@ -12,10 +12,6 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
   }
 
   body {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
     font-family: ${({ theme }) => theme.font};
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.colors.lightGrey};
@@ -25,10 +21,11 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     padding: 10px;
   }
 
-  header, nav, footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  header {
+    margin: 0 auto;
+  }
+
+  footer {
+    margin: 0 auto;
   }
 `
