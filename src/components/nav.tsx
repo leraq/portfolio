@@ -58,19 +58,8 @@ export const Nav: React.FC = () => {
               </li>
             )
           })}
-          <CVLink />
         </ul>
       </div>
     </StyledNav>
-  )
-}
-
-const CVLink = () => {
-  return (
-    <li>
-      <a className="link" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-        CV
-      </a>
-    </li>
   )
 }
