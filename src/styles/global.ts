@@ -27,10 +27,6 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     height:100%;
   }
 
-  header {
-    margin: 0 auto;
-  }
-
   footer {
     margin: 0 auto;
   }

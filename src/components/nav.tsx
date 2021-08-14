@@ -22,38 +22,46 @@ const routes = [
   },
 ]
 
-const StyledLinks = styled(StyledButton)`
-  .menu ul li {
-    font-size: 20px;
+const StyledNav = styled(StyledButton)`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 100vh;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .wrapper ul li {
     text-shadow: none;
     border-color: transparent;
   }
 
-  .menu ul li::after {
+  .wrapper ul li::after {
     border-color: transparent;
   }
 `
 
 export const Nav: React.FC = () => {
   return (
-    <nav>
-      <StyledLinks>
-        <div className="menu">
-          <ul>
-            {routes.map(({ name, url }, i) => {
-              return (
-                <li key={i.toString()}>
-                  <Link className="link" to={url}>
-                    {name}
-                  </Link>
-                </li>
-              )
-            })}
-            <CVLink />
-          </ul>
-        </div>
-      </StyledLinks>
-    </nav>
+    <StyledNav>
+      <div className="wrapper">
+        <ul>
+          {routes.map(({ name, url }, i) => {
+            return (
+              <li key={i.toString()}>
+                <Link className="link" to={url}>
+                  {name}
+                </Link>
+              </li>
+            )
+          })}
+          <CVLink />
+        </ul>
+      </div>
+    </StyledNav>
   )
 }
 

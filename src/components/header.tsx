@@ -1,12 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { Heading } from '@components'
 import { StyledButton } from '@styles'
 
+const BlueHeading = styled(Heading)`
+  color: ${({ theme }) => theme.colors.zimaBlue};
+  padding: 10px;
+  margin: 3rem 0 0 0;
+`
+
 const GreyHeading = styled(Heading)`
   padding: 5px;
-  margin: 30px 0;
+  margin: 0;
 `
 
 const StyledHeader = styled.header`
@@ -20,31 +25,28 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
   }
-
-  p {
-    text-align: center;
-  }
 `
 
-export const Error: React.FC = () => {
+export const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <GreyHeading headingLevel="h3">Page not found</GreyHeading>
-      <p>Sorry, this page does not exist.</p>
-      <GoBackBtn />
+      <BlueHeading headingLevel="h5">Hey, my name is</BlueHeading>
+      <GreyHeading headingLevel="h2">Leon Delaimy</GreyHeading>
+      <p>{`I'm a software engineer with full stack experience.`}</p>
+      <GetInTouchBtn />
     </StyledHeader>
   )
 }
 
-const GoBackBtn = () => {
+const GetInTouchBtn = () => {
   return (
     <StyledButton primary>
       <div className="wrapper">
         <ul>
           <li>
-            <Link className="link" to="/">
-              Go back
-            </Link>
+            <a className="link" href="mailto:ldelaimy1@gmail.com">
+              Get in touch
+            </a>
           </li>
         </ul>
       </div>
