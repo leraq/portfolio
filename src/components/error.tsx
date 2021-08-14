@@ -5,8 +5,8 @@ import { Heading } from '@components'
 import { StyledButton } from '@styles'
 
 const GreyHeading = styled(Heading)`
-  padding: 5px;
-  margin: 30px 0;
+  margin: 0;
+  text-align: center;
 `
 
 const StyledHeader = styled.header`
