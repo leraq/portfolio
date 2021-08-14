@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
   }
 
   body {
+    margin: 0;
     font-family: ${({ theme }) => theme.font};
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.colors.lightGrey};
