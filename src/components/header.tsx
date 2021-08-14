@@ -25,6 +25,10 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: center;
   }
+
+  p {
+    padding: 10px;
+  }
 `
 
 export const Header: React.FC = () => {

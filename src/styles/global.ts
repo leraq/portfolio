@@ -30,12 +30,4 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
       color: ${({ theme }) => theme.colors.pastelRed};
     }
   }
-
-  p {
-    padding: 10px;
-  }
-
-  footer {
-    margin: 0 auto;
-  }
 `

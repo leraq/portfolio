@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import { Layout, Header, Nav, About, Experience, Projects, Contact } from '@components'
+import { Layout, Header, Nav, About, Experience, Projects, Contact, Footer } from '@components'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,7 +11,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Experience />
       <Projects />
       <Contact />
-      <footer>footer</footer>
+      <Footer />
     </Layout>
   )
 }
