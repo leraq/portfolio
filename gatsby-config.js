@@ -14,6 +14,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-anchor-links',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading } from '@components'
 import { StyledButton } from '@styles'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 const BlueHeading = styled(Heading)`
   color: ${({ theme }) => theme.colors.zimaBlue};
@@ -36,21 +37,19 @@ export const Header: React.FC = () => {
     <StyledHeader>
       <BlueHeading headingLevel="h5">Hey, my name is</BlueHeading>
       <GreyHeading headingLevel="h2">Leon Delaimy</GreyHeading>
-      <p>{`I'm a software engineer with full stack experience.`}</p>
-      <GetInTouchBtn />
+      <p>I&apos;m a software engineer with full stack experience</p>
+      <EnterBtn />
     </StyledHeader>
   )
 }
 
-const GetInTouchBtn = () => {
+const EnterBtn = () => {
   return (
     <StyledButton primary>
       <div className="btn-wrapper">
         <ul>
           <li>
-            <a className="link" href="mailto:ldelaimy1@gmail.com">
-              Get in touch
-            </a>
+            <AnchorLink className="link" to="#nav" title="Enter" />
           </li>
         </ul>
       </div>

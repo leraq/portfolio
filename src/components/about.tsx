@@ -56,7 +56,7 @@ const StyledImage = styled.div`
 
 export const About: React.FC = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id="about">
       <div className="about-wrapper">
         <div>
           <BlueHeading headingLevel="h4">About me</BlueHeading>

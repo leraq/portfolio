@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { StyledButton } from '@styles'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 const routes = [
   {
@@ -46,15 +46,13 @@ const StyledNav = styled(StyledButton)`
 
 export const Nav: React.FC = () => {
   return (
-    <StyledNav>
+    <StyledNav id="nav">
       <div className="btn-wrapper">
         <ul>
           {routes.map(({ name, url }, i) => {
             return (
               <li key={i.toString()}>
-                <Link className="link" to={url}>
-                  {name}
-                </Link>
+                <AnchorLink className="link" to={url} title={name} />
               </li>
             )
           })}

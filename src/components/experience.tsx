@@ -8,6 +8,7 @@ const BlueHeading = styled(Heading)`
   padding: 10px;
   margin: 3rem 0 0 0;
 `
+
 const BlueLink = styled(Heading)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 10px;
@@ -53,7 +54,7 @@ const StyledExperience = styled.section`
 
 export const Experience: React.FC = () => {
   return (
-    <StyledExperience>
+    <StyledExperience id="experience">
       <BlueHeading headingLevel="h4">Experience</BlueHeading>
       <div className="job">
         <GreyHeading headingLevel="h5">Software Engineer @ </GreyHeading>
