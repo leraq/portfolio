@@ -20,7 +20,13 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     overflow: hidden;
     width: 350px;
     height: 54.5px;
-    clip-path: polygon(100% 0%, 100% 53%, 92% 104.5%, 0% 104.5%, 0% 0%);
+    clip-path: polygon(
+      100% 0%,
+      100% 53%,
+      92% 104.5%,
+      0% 104.5%,
+      0% 0%
+    );
     font-size: 26px;
     text-shadow: 0px 0px 3px ${({ theme }) => theme.colors.pastelRed};
     border-style: solid;

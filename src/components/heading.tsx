@@ -40,7 +40,7 @@ const StyledHeading = styled.div`
     }
 
     h4 {
-      font-size: 1rem;
+      font-size: 1.25rem;
     }
 
     h5 {

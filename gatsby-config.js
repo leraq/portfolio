@@ -5,7 +5,7 @@ module.exports = {
     title: 'Leon Delaimy',
     description: 'Leon Delaimy: software engineer',
     siteUrl: 'https://leondelaimy.com', // No trailing slash allowed!
-    image: '/me.png', // Path to your image you placed in the 'static' folder
+    image: '/icon.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
     'gatsby-plugin-image',
@@ -17,7 +17,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/me.png',
+        icon: 'src/images/icon.png',
       },
     },
     {

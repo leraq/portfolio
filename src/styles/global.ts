@@ -18,14 +18,21 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     color: ${({ theme }) => theme.colors.lightGrey};
   }
 
-  p {
-    padding: 10px;
-  }
-
   a {
     display:block;
     width:100%;
     height:100%;
+    color: ${({ theme }) => theme.colors.zimaBlue};
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &:hover,
+    &:focus {
+      color: ${({ theme }) => theme.colors.pastelRed};
+    }
+  }
+
+  p {
+    padding: 10px;
   }
 
   footer {
