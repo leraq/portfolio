@@ -8,6 +8,9 @@ module.exports = {
     image: '/me.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',

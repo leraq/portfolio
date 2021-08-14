@@ -1,13 +1,15 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import { Layout, Header, Nav } from '@components'
+import { Layout, Header, Nav, About } from '@components'
 
-const IndexPage: React.FC<PageProps> = ({ children }) => {
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <Header />
       <Nav />
-      <main style={{ height: '1000px' }}>{children}</main>
+      <main>
+        <About />
+      </main>
       <footer>footer</footer>
     </Layout>
   )
