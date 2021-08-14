@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     {
@@ -18,9 +17,6 @@ module.exports = {
         icon: 'src/images/me.png',
       },
     },
-    'gatsby-plugin-mdx',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
