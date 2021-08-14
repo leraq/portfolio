@@ -7,12 +7,10 @@ const IndexPage: React.FC<PageProps> = () => {
     <Layout>
       <Header />
       <Nav />
-      <main>
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
       <footer>footer</footer>
     </Layout>
   )

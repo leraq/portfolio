@@ -9,7 +9,7 @@ const BlueHeading = styled(Heading)`
   margin: 15px auto;
 `
 
-const StyledAbout = styled.div`
+const StyledAbout = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,11 +22,6 @@ const StyledAbout = styled.div`
     justify-content: center;
     align-items: center;
     gap: 5rem;
-  }
-
-  .about {
-    displat: flex;
-    flex-direction: column;
   }
 
   p {
@@ -61,24 +56,22 @@ const StyledImage = styled.div`
 
 export const About: React.FC = () => {
   return (
-    <section>
-      <StyledAbout>
-        <div className="about-wrapper">
-          <div className="about">
-            <BlueHeading headingLevel="h4">About me</BlueHeading>
-            <p>
-              I&apos;m a software engineer based in Manchester, passionate about science and tech. I&apos;m currently
-              working with a growing healthcare tech start-up called
-              <a href="https://visformatics.net" target="_blank" rel="noreferrer">
-                Visformatics
-              </a>
-            </p>
-          </div>
-          <StyledImage>
-            <StaticImage className="img" width={300} height={300} src="../images/me.jpg" alt="" />
-          </StyledImage>
+    <StyledAbout>
+      <div className="about-wrapper">
+        <div>
+          <BlueHeading headingLevel="h4">About me</BlueHeading>
+          <p>
+            I&apos;m a software engineer based in Manchester, passionate about science and tech. I&apos;m currently
+            working with a growing healthcare tech start-up called
+            <a href="https://visformatics.net" target="_blank" rel="noreferrer">
+              Visformatics
+            </a>
+          </p>
         </div>
-      </StyledAbout>
-    </section>
+        <StyledImage>
+          <StaticImage className="img" width={300} height={300} src="../images/me.jpg" alt="" />
+        </StyledImage>
+      </div>
+    </StyledAbout>
   )
 }

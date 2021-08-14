@@ -36,15 +36,15 @@ const StyledHeading = styled.div`
     }
 
     h3 {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
 
     h4 {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
 
     h5 {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
 
     h6 {
