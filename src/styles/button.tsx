@@ -5,12 +5,12 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     box-sizing: border-box;
   }
 
-  .wrapper ul {
+  .btn-wrapper ul {
     list-style-type: none;
     padding: 0px;
   }
 
-  .wrapper ul li {
+  .btn-wrapper ul li {
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
@@ -30,7 +30,7 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     transition: border-color 1s ease-out;
   }
 
-  .wrapper ul li::after {
+  .btn-wrapper ul li::after {
     content: '';
     position: absolute;
     bottom: -17px;
@@ -45,8 +45,8 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     transition: border-color 1s ease-out;
   }
 
-  .wrapper ul li:hover::after,
-  .wrapper ul li:hover {
+  .btn-wrapper ul li:hover::after,
+  .btn-wrapper ul li:hover {
     color: ${({ theme }) => theme.colors.zimaBlue};
     background: ${({ theme }) => theme.background};
     border-color: ${({ theme }) => theme.colors.zimaBlue};
@@ -54,7 +54,7 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     transition: border-color 0.23s linear;
   }
 
-  .wrapper ul li .link {
+  .btn-wrapper ul li .link {
     color: ${({ primary, theme }) => (primary ? theme.colors.pastelRed : theme.colors.lightGrey)};
     text-decoration: none;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

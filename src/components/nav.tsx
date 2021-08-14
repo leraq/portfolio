@@ -29,17 +29,17 @@ const StyledNav = styled(StyledButton)`
   margin: 0 auto;
   height: 100vh;
 
-  .wrapper {
+  .btn-wrapper {
     display: flex;
     justify-content: center;
   }
 
-  .wrapper ul li {
+  .btn-wrapper ul li {
     text-shadow: none;
     border-color: transparent;
   }
 
-  .wrapper ul li::after {
+  .btn-wrapper ul li::after {
     border-color: transparent;
   }
 `
@@ -47,7 +47,7 @@ const StyledNav = styled(StyledButton)`
 export const Nav: React.FC = () => {
   return (
     <StyledNav>
-      <div className="wrapper">
+      <div className="btn-wrapper">
         <ul>
           {routes.map(({ name, url }, i) => {
             return (

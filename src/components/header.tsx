@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
   margin: 0 auto;
   height: 100vh;
 
-  .wrapper {
+  .btn-wrapper {
     display: flex;
     justify-content: center;
   }
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
 const GetInTouchBtn = () => {
   return (
     <StyledButton primary>
-      <div className="wrapper">
+      <div className="btn-wrapper">
         <ul>
           <li>
             <a className="link" href="mailto:ldelaimy1@gmail.com">

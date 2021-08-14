@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   margin: 0 auto;
   height: 100vh;
 
-  .wrapper {
+  .btn-wrapper {
     display: flex;
     justify-content: center;
   }
@@ -39,7 +39,7 @@ export const Error: React.FC = () => {
 const GoBackBtn = () => {
   return (
     <StyledButton primary>
-      <div className="wrapper">
+      <div className="btn-wrapper">
         <ul>
           <li>
             <Link className="link" to="/">
