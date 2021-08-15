@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Heading } from '@components'
 import { StyledButton } from '@styles'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const BlueHeading = styled(Heading)`
   color: ${({ theme }) => theme.colors.zimaBlue};
@@ -49,7 +49,9 @@ const EnterBtn = () => {
       <div className="btn-wrapper">
         <ul>
           <li>
-            <AnchorLink className="link" to="#nav" title="Enter" />
+            <button className="link" onClick={() => scrollTo('#nav')}>
+              Enter
+            </button>
           </li>
         </ul>
       </div>

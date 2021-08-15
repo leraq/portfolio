@@ -30,4 +30,17 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
       color: ${({ theme }) => theme.colors.pastelRed};
     }
   }
+
+  button, input[type="submit"], input[type="reset"] {
+    display:block;
+    width:100%;
+    height:100%;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
 `

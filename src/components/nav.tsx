@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StyledButton } from '@styles'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const routes = [
   {
@@ -52,7 +52,9 @@ export const Nav: React.FC = () => {
           {routes.map(({ name, url }, i) => {
             return (
               <li key={i.toString()}>
-                <AnchorLink className="link" to={url} title={name} />
+                <button className="link" onClick={() => scrollTo(url)}>
+                  {name}
+                </button>
               </li>
             )
           })}
