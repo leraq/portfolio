@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'Leon Delaimy',
     description: 'Leon Delaimy: software engineer',
-    siteUrl: 'https://leondelaimy.com', // No trailing slash allowed!
-    image: '/icon.png', // Path to your image you placed in the 'static' folder
+    siteUrl: 'https://leondelaimy.com',
+    image: '/me-icon.png',
   },
   plugins: [
     'gatsby-plugin-image',
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        icon: 'src/images/me-icon.png',
       },
     },
     {

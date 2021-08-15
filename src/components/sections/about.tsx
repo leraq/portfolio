@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Title } from '@components'
-import { StaticImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 const AboutTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
@@ -54,7 +55,19 @@ const StyledImage = styled.div`
   }
 `
 
+const query = graphql`
+  query {
+    fileName: file(relativePath: { eq: "me.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+      }
+    }
+  }
+`
+
 export const About: React.FC = () => {
+  const data = useStaticQuery(query)
+  const image = getImage(data.fileName) as IGatsbyImageData
   return (
     <StyledAbout id="about">
       <div className="about-wrapper">
@@ -69,7 +82,7 @@ export const About: React.FC = () => {
           </p>
         </div>
         <StyledImage>
-          <StaticImage className="img" width={300} height={300} src="../../images/me.jpg" alt="" />
+          <GatsbyImage image={image} className="img" alt="leon-delaimy" />
         </StyledImage>
       </div>
     </StyledAbout>

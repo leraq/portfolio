@@ -18,7 +18,7 @@ const StyledContact = styled.section`
 
   p {
     padding: 0 30px 0 30px;
-    max-width: 400px;
+    max-width: 300px;
     text-align: center;
   }
 
@@ -32,7 +32,7 @@ export const Contact: React.FC = () => {
   return (
     <StyledContact id="contact">
       <ContactTitle headingLevel="h4">Contact me</ContactTitle>
-      <p>If you want to get hold of me, send over an email</p>
+      <p>Have any questions and want to contact me?</p>
       <GetInTouchBtn />
     </StyledContact>
   )
