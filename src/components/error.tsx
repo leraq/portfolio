@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Heading } from '@components'
+import { Title } from '@components'
 import { StyledButton } from '@styles'
 
-const GreyHeading = styled(Heading)`
+const ErrorTitle = styled(Title)`
   margin: 0;
   text-align: center;
 `
@@ -29,7 +29,7 @@ const StyledHeader = styled.header`
 export const Error: React.FC = () => {
   return (
     <StyledHeader>
-      <GreyHeading headingLevel="h3">Page not found</GreyHeading>
+      <ErrorTitle headingLevel="h3">Page not found</ErrorTitle>
       <p>Sorry, this page does not exist.</p>
       <GoBackBtn />
     </StyledHeader>

@@ -24,6 +24,7 @@
     ]
   },
   "dependencies": {
+    "@react-spring/web": "^9.2.4",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.11.1",
     "gatsby-plugin-alias-imports": "^1.0.5",

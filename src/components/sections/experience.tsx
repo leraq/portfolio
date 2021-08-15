@@ -1,21 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from '@components'
+import { Title } from '@components'
 import { StyledButton } from '@styles'
 
-const BlueHeading = styled(Heading)`
+const ExperienceTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 10px;
   margin: 3rem 0 0 0;
 `
 
-const BlueLink = styled(Heading)`
+const Position = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 10px;
   margin: 0;
 `
 
-const GreyHeading = styled(Heading)`
+const Job = styled(Title)`
   padding: 10px;
   margin: 0;
 `
@@ -55,9 +55,9 @@ const StyledExperience = styled.section`
 export const Experience: React.FC = () => {
   return (
     <StyledExperience id="experience">
-      <BlueHeading headingLevel="h4">Experience</BlueHeading>
+      <ExperienceTitle headingLevel="h4">Experience</ExperienceTitle>
       <div className="job">
-        <GreyHeading headingLevel="h5">Software Engineer @ </GreyHeading>
+        <Position headingLevel="h5">Software Engineer @ </Position>
         <JobLink />
       </div>
       <div className="bullet-points">
@@ -70,11 +70,11 @@ export const Experience: React.FC = () => {
 
 const JobLink = () => {
   return (
-    <BlueLink headingLevel="h5">
+    <Job headingLevel="h5">
       <a href="https://visformatics.net" target="_blank" rel="noreferrer">
         Visformatics
       </a>
-    </BlueLink>
+    </Job>
   )
 }
 

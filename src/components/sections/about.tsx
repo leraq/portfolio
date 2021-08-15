@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from '@components'
+import { Title } from '@components'
 import { StaticImage } from 'gatsby-plugin-image'
 
-const BlueHeading = styled(Heading)`
+const AboutTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 0 30px 0 30px;
   margin: 15px auto;
@@ -59,7 +59,7 @@ export const About: React.FC = () => {
     <StyledAbout id="about">
       <div className="about-wrapper">
         <div>
-          <BlueHeading headingLevel="h4">About me</BlueHeading>
+          <AboutTitle headingLevel="h4">About me</AboutTitle>
           <p>
             I&apos;m a software engineer based in Manchester, passionate about science and tech. I&apos;m currently
             working with a growing healthcare tech start-up called
@@ -69,7 +69,7 @@ export const About: React.FC = () => {
           </p>
         </div>
         <StyledImage>
-          <StaticImage className="img" width={300} height={300} src="../images/me.jpg" alt="" />
+          <StaticImage className="img" width={300} height={300} src="../../images/me.jpg" alt="" />
         </StyledImage>
       </div>
     </StyledAbout>

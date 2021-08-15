@@ -16,7 +16,8 @@
       "@components": ["src/components"],
       "@images": ["src/images"],
       "@pages": ["src/pages"],
-      "@styles": ["src/styles"]
+      "@styles": ["src/styles"],
+      "@animations": ["src/animations"]
     }
   },
   "include": ["src/**/*"]

@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from '@components'
+import { Title } from '@components'
+import { Trail } from '@animations'
 import { StyledButton } from '@styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
-const BlueHeading = styled(Heading)`
+const MyNameIs = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 10px;
   margin: 3rem 0 0 0;
 `
 
-const GreyHeading = styled(Heading)`
+const Name = styled(Title)`
   padding: 5px;
   margin: 0;
 `
@@ -35,22 +36,24 @@ const StyledHeader = styled.header`
 export const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <BlueHeading headingLevel="h5">Hey, my name is</BlueHeading>
-      <GreyHeading headingLevel="h2">Leon Delaimy</GreyHeading>
-      <p>I&apos;m a software engineer with full stack experience</p>
-      <EnterBtn />
+      <Trail open={true}>
+        <MyNameIs headingLevel="h5">Hey, my name is</MyNameIs>
+        <Name headingLevel="h2">Leon Delaimy</Name>
+        <p>I&apos;m a software engineer with full stack experience</p>
+        <FindOutMoreBtn />
+      </Trail>
     </StyledHeader>
   )
 }
 
-const EnterBtn = () => {
+const FindOutMoreBtn = () => {
   return (
     <StyledButton primary>
       <div className="btn-wrapper">
         <ul>
           <li>
             <button className="link" onClick={() => scrollTo('#nav')}>
-              Enter
+              Find out more
             </button>
           </li>
         </ul>

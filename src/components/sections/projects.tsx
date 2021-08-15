@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading } from '@components'
+import { Title } from '@components'
 
-const BlueHeading = styled(Heading)`
+const ProjectsTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 0 30px 0 30px;
   margin: 15px auto;
 `
 
-const GreyHeading = styled(Heading)`
+const Project = styled(Title)`
   padding: 0 30px 0 30px;
   margin: 0;
 `
@@ -39,8 +39,8 @@ export const Projects: React.FC = () => {
     <StyledProjects id="projects">
       <div className="projects-wrapper">
         <div>
-          <BlueHeading headingLevel="h4">Projects</BlueHeading>
-          <GreyHeading headingLevel="h5">b2b</GreyHeading>
+          <ProjectsTitle headingLevel="h4">Projects</ProjectsTitle>
+          <Project headingLevel="h5">b2b</Project>
           <p>Share tracks with friends</p>
           <p>Full stack web application with Postgres database, Golang API using GraphQL and React frontend</p>
         </div>

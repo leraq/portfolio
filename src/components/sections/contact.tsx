@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { StyledButton } from '@styles'
-import { Heading } from '@components'
+import { Title } from '@components'
 
-const BlueHeading = styled(Heading)`
+const ContactTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
   margin: 3rem 0 0 0;
 `
@@ -31,7 +31,7 @@ const StyledContact = styled.section`
 export const Contact: React.FC = () => {
   return (
     <StyledContact id="contact">
-      <BlueHeading headingLevel="h4">Contact me</BlueHeading>
+      <ContactTitle headingLevel="h4">Contact me</ContactTitle>
       <p>If you want to get hold of me, send over an email</p>
       <GetInTouchBtn />
     </StyledContact>
