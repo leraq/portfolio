@@ -11,11 +11,17 @@ const StyledFooter = styled.footer`
     gap: 40px;
   }
 `
-const StyledIcon = styled.svg`
-  fill: ${({ theme }) => theme.colors.pastelRed};
-  padding: 5px;
-  height: 3rem;
-  width: 2.5rem;
+const StyledIcon = styled.div`
+  svg {
+    fill: ${({ theme }) => theme.colors.zimaBlue};
+    padding: 5px;
+    height: 3rem;
+    width: 2.5rem;
+    &:hover,
+    &:focus {
+      fill: ${({ theme }) => theme.colors.pastelRed};
+    }
+  }
 `
 
 export const Footer: React.FC = () => {
@@ -23,10 +29,14 @@ export const Footer: React.FC = () => {
     <StyledFooter>
       <div className="icons">
         <StyledIcon>
-          <GitHubIcon />
+          <a href="https://github.com/leraq" target="_blank" rel="noreferrer">
+            <GitHubIcon />
+          </a>
         </StyledIcon>
         <StyledIcon>
-          <LinkedInIcon />
+          <a href="https://www.linkedin.com/in/leon-delaimy-606505150/" target="_blank" rel="noreferrer">
+            <LinkedInIcon />
+          </a>
         </StyledIcon>
       </div>
       <p>Built by Leon Delaimy</p>
