@@ -12,7 +12,6 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
 
   .btn-wrapper ul li {
     text-align: center;
-    text-transform: uppercase;
     cursor: pointer;
     position: relative;
     padding: 10px;
