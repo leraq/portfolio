@@ -21,8 +21,7 @@ const WIP = styled(Title)`
 
   a {
     color: ${({ theme }) => theme.colors.pastelRed};
-    &:hover,
-    &:focus {
+    &:hover {
       color: ${({ theme }) => theme.colors.zimaBlue};
     }
   }

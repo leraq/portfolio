@@ -25,8 +25,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     color: ${({ theme }) => theme.colors.zimaBlue};
     text-decoration: none;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    &:hover,
-    &:focus {
+    &:hover {
       color: ${({ theme }) => theme.colors.pastelRed};
     }
   }

@@ -17,8 +17,7 @@ const StyledIcon = styled.div`
     padding: 5px;
     height: 3rem;
     width: 2.5rem;
-    &:hover,
-    &:focus {
+    &:hover {
       fill: ${({ theme }) => theme.colors.pastelRed};
     }
   }

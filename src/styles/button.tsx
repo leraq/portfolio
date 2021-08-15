@@ -63,8 +63,7 @@ export const StyledButton = styled.div<{ primary?: boolean }>`
     color: ${({ primary, theme }) => (primary ? theme.colors.pastelRed : theme.colors.lightGrey)};
     text-decoration: none;
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    &:hover,
-    &:focus {
+    &:hover {
       color: ${({ theme }) => theme.colors.zimaBlue};
     }
 `
