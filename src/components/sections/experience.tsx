@@ -10,7 +10,6 @@ const ExperienceTitle = styled(Title)`
 `
 
 const Position = styled(Title)`
-  color: ${({ theme }) => theme.colors.zimaBlue};
   padding: 10px;
   margin: 0;
 `
