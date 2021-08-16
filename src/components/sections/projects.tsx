@@ -90,7 +90,7 @@ export const Projects: React.FC = () => {
           <ProjectsTitle headingLevel="h4">Projects</ProjectsTitle>
           <B2BLink />
           <p>Share tracks with friends</p>
-          <p>Full stack web application written in React, GoLang & PostgreSQL</p>
+          <p>Full stack web application with React frontend, Golang API & PostgreSQL database</p>
         </div>
       </div>
     </StyledProjects>

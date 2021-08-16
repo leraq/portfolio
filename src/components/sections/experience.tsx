@@ -45,6 +45,12 @@ const StyledExperience = styled.section`
     font-size: 0.75rem;
   }
 
+  @media (min-width: 813px) {
+    p {
+      font-size: 1em;
+    }
+  }
+
   .btn-wrapper {
     display: flex;
     justify-content: center;
