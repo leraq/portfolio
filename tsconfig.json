@@ -17,7 +17,8 @@
       "@images": ["src/images"],
       "@pages": ["src/pages"],
       "@styles": ["src/styles"],
-      "@animations": ["src/animations"]
+      "@animations": ["src/animations"],
+      "@hooks": ["src/hooks"]
     }
   },
   "include": ["src/**/*"]

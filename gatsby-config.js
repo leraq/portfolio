@@ -46,6 +46,7 @@ module.exports = {
           '@pages': path.resolve(__dirname, 'src/pages'),
           '@styles': path.resolve(__dirname, 'src/styles'),
           '@animations': path.resolve(__dirname, 'src/animations'),
+          '@hooks': path.resolve(__dirname, 'src/hooks'),
         },
       },
     },
