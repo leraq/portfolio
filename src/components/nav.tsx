@@ -45,10 +45,10 @@ const StyledNav = styled.nav`
 `
 
 const StyledButtons = styled(StyledButton)`
-  .btn-wrapper {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
 
   .btn-wrapper ul li {
     text-shadow: none;
@@ -89,26 +89,28 @@ export const Nav: React.FC<INavProps> = ({ menu, setMenuOpen }) => {
           <ArrowDownIcon />
         </button>
       </StyledIcon>
-      <StyledButtons>
-        <animated.div className="menu btn-wrapper" style={menuAnimation}>
-          <StyledIcon>
-            <button onClick={() => setMenuOpen(false)}>
-              <ArrowUpIcon />
-            </button>
-          </StyledIcon>
-          <ul>
-            {routes.map(({ name, route }, i) => {
-              return (
-                <li key={i.toString()}>
-                  <button className="link" onClick={() => handleNavigation(route, setMenuOpen)}>
-                    {name}
-                  </button>
-                </li>
-              )
-            })}
-          </ul>
-        </animated.div>
-      </StyledButtons>
+      <animated.div className="menu" style={menuAnimation}>
+        <StyledIcon>
+          <button onClick={() => setMenuOpen(false)}>
+            <ArrowUpIcon />
+          </button>
+        </StyledIcon>
+        <StyledButtons>
+          <div className="btn-wrapper">
+            <ul>
+              {routes.map(({ name, route }, i) => {
+                return (
+                  <li key={i.toString()}>
+                    <button className="link" onClick={() => handleNavigation(route, setMenuOpen)}>
+                      {name}
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </StyledButtons>
+      </animated.div>
     </StyledNav>
   )
 }
