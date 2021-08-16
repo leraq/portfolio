@@ -52,7 +52,7 @@ const FindOutMoreBtn = () => {
       <div className="btn-wrapper">
         <ul>
           <li>
-            <button className="link" onClick={() => scrollTo('#nav')}>
+            <button className="link" onClick={() => scrollTo('#about')}>
               Find out more
             </button>
           </li>

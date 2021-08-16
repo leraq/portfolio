@@ -1,10 +1,10 @@
-export type ITheme = {
+export interface ITheme {
   background: string
   colors: IColor
   font: string
 }
 
-type IColor = {
+interface IColor {
   crimson: string
   pastelRed: string
   darkBlue: string

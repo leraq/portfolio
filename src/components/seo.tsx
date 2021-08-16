@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 
-type SEOProps = {
+interface SEOProps {
   title?: string
   description?: string
   image?: string

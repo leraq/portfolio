@@ -2,32 +2,43 @@ import React from 'react'
 import styled from 'styled-components'
 import { StyledButton } from '@styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import { animated } from '@react-spring/web'
+import { useSpring } from '@react-spring/core'
 
 const routes = [
   {
     name: 'About',
-    url: '#about',
+    route: '#about',
   },
   {
     name: 'Experience',
-    url: '#experience',
+    route: '#experience',
   },
   {
     name: 'Projects',
-    url: '#projects',
+    route: '#projects',
   },
   {
     name: 'Contact',
-    url: '#contact',
+    route: '#contact',
   },
 ]
 
 const StyledNav = styled(StyledButton)`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  height: 100vh;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: ${({ theme }) => theme.background};
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    z-index: 30;
+    top: 0;
+    overflow: hidden;
+  }
 
   .btn-wrapper {
     display: flex;
@@ -44,22 +55,36 @@ const StyledNav = styled(StyledButton)`
   }
 `
 
-export const Nav: React.FC = () => {
+interface INavProps {
+  menu: boolean
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export const Nav: React.FC<INavProps> = ({ menu, setMenuOpen }) => {
+  const menuAnimation = useSpring({
+    transform: menu ? `translateY(0)` : `translateY(-100%)`,
+    opacity: menu ? 1 : 0,
+  })
   return (
     <StyledNav id="nav">
-      <div className="btn-wrapper">
+      <animated.div className="menu btn-wrapper" style={menuAnimation}>
         <ul>
-          {routes.map(({ name, url }, i) => {
+          {routes.map(({ name, route }, i) => {
             return (
               <li key={i.toString()}>
-                <button className="link" onClick={() => scrollTo(url)}>
+                <button className="link" onClick={() => handleNavigation(route, setMenuOpen)}>
                   {name}
                 </button>
               </li>
             )
           })}
         </ul>
-      </div>
+      </animated.div>
     </StyledNav>
   )
+}
+
+const handleNavigation = (route: string, setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>) => {
+  setMenuOpen(false)
+  return scrollTo(route)
 }

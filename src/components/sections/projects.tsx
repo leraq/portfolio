@@ -10,12 +10,7 @@ const ProjectsTitle = styled(Title)`
   margin: 15px auto;
 `
 
-const Project = styled(Title)`
-  padding: 0 30px 0 30px;
-  margin: 0;
-`
-
-const WIP = styled(Title)`
+const B2B = styled(Title)`
   padding: 0 30px 0 30px;
   margin: 0;
 
@@ -39,7 +34,7 @@ const StyledProjects = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   p {
@@ -90,9 +85,9 @@ export const Projects: React.FC = () => {
       <div className="projects-wrapper">
         <div>
           <ProjectsTitle headingLevel="h4">Projects</ProjectsTitle>
-          <Project headingLevel="h5">b2b</Project>
-          <p>Share tracks with friends</p>
           <B2BLink />
+          <p>Share tracks with friends</p>
+          <p>Full stack web application written in React, GoLang & PostgreSQL</p>
         </div>
         <StyledImage>
           <GatsbyImage image={image} className="img" alt="b2b" />
@@ -104,10 +99,10 @@ export const Projects: React.FC = () => {
 
 const B2BLink = () => {
   return (
-    <WIP headingLevel="h6">
+    <B2B headingLevel="h5">
       <a href="https://b2b-testing-95cff.web.app" target="_blank" rel="noreferrer">
-        Work in progress
+        B2B
       </a>
-    </WIP>
+    </B2B>
   )
 }
