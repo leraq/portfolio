@@ -35,7 +35,7 @@ const StyledHeader = styled.header`
 
 export const Header: React.FC = () => {
   return (
-    <StyledHeader>
+    <StyledHeader id="intro">
       <Trail open={true}>
         <MyNameIs headingLevel="h5">Hey, my name is</MyNameIs>
         <Name headingLevel="h2">Leon Delaimy</Name>

@@ -4,6 +4,7 @@ import { StyledButton } from '@styles'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import { animated } from '@react-spring/web'
 import { useSpring } from '@react-spring/core'
+import { ArrowDownIcon, ArrowUpIcon } from '@components'
 
 const routes = [
   {
@@ -24,7 +25,7 @@ const routes = [
   },
 ]
 
-const StyledNav = styled(StyledButton)`
+const StyledNav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 99;
@@ -36,13 +37,14 @@ const StyledNav = styled(StyledButton)`
     align-items: center;
     position: fixed;
     background-color: ${({ theme }) => theme.background};
-    color: #fff;
     height: 100%;
     width: 100%;
     top: 0;
     overflow: hidden;
   }
+`
 
+const StyledButtons = styled(StyledButton)`
   .btn-wrapper {
     display: flex;
     justify-content: center;
@@ -58,6 +60,18 @@ const StyledNav = styled(StyledButton)`
   }
 `
 
+const StyledIcon = styled.div`
+  svg {
+    fill: ${({ theme }) => theme.colors.zimaBlue};
+    padding: 5px;
+    height: auto;
+    width: 4rem;
+    &:hover {
+      fill: ${({ theme }) => theme.colors.pastelRed};
+    }
+  }
+`
+
 interface INavProps {
   menu: boolean
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -70,22 +84,31 @@ export const Nav: React.FC<INavProps> = ({ menu, setMenuOpen }) => {
   })
   return (
     <StyledNav id="nav">
-      <div>
-        <button onClick={() => setMenuOpen(true)}>Menu</button>
-      </div>
-      <animated.div className="menu btn-wrapper" style={menuAnimation}>
-        <ul>
-          {routes.map(({ name, route }, i) => {
-            return (
-              <li key={i.toString()}>
-                <button className="link" onClick={() => handleNavigation(route, setMenuOpen)}>
-                  {name}
-                </button>
-              </li>
-            )
-          })}
-        </ul>
-      </animated.div>
+      <StyledIcon>
+        <button onClick={() => setMenuOpen(true)}>
+          <ArrowDownIcon />
+        </button>
+      </StyledIcon>
+      <StyledButtons>
+        <animated.div className="menu btn-wrapper" style={menuAnimation}>
+          <StyledIcon>
+            <button onClick={() => setMenuOpen(false)}>
+              <ArrowUpIcon />
+            </button>
+          </StyledIcon>
+          <ul>
+            {routes.map(({ name, route }, i) => {
+              return (
+                <li key={i.toString()}>
+                  <button className="link" onClick={() => handleNavigation(route, setMenuOpen)}>
+                    {name}
+                  </button>
+                </li>
+              )
+            })}
+          </ul>
+        </animated.div>
+      </StyledButtons>
     </StyledNav>
   )
 }

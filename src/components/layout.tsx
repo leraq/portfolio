@@ -9,7 +9,7 @@ export const Layout: React.FC = ({ children }) => {
       <SEO />
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Container>{children}</Container>
+        <Container id="root">{children}</Container>
       </ThemeProvider>
     </>
   )
