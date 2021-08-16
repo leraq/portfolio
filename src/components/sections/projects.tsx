@@ -34,7 +34,7 @@ const StyledProjects = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 5rem;
   }
 
   p {
@@ -69,7 +69,7 @@ const StyledImage = styled.div`
 
 const query = graphql`
   query {
-    fileName: file(relativePath: { eq: "b2b-chat.png" }) {
+    fileName: file(relativePath: { eq: "b2b-icon.png" }) {
       childImageSharp {
         gatsbyImageData(width: 300, placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
@@ -83,15 +83,15 @@ export const Projects: React.FC = () => {
   return (
     <StyledProjects id="projects">
       <div className="projects-wrapper">
+        <StyledImage>
+          <GatsbyImage image={image} className="img" alt="b2b" />
+        </StyledImage>
         <div>
           <ProjectsTitle headingLevel="h4">Projects</ProjectsTitle>
           <B2BLink />
           <p>Share tracks with friends</p>
           <p>Full stack web application written in React, GoLang & PostgreSQL</p>
         </div>
-        <StyledImage>
-          <GatsbyImage image={image} className="img" alt="b2b" />
-        </StyledImage>
       </div>
     </StyledProjects>
   )
