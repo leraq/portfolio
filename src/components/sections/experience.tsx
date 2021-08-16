@@ -5,17 +5,17 @@ import { StyledButton } from '@styles'
 
 const ExperienceTitle = styled(Title)`
   color: ${({ theme }) => theme.colors.zimaBlue};
-  padding: 10px;
-  margin: 3rem 0 0 0;
+  padding: 0 30px 0 30px;
+  margin: 15px auto;
 `
 
 const Position = styled(Title)`
-  padding: 10px;
+  padding: 0 15px 0 30px;
   margin: 0;
 `
 
 const Job = styled(Title)`
-  padding: 10px;
+  padding: 0;
   margin: 0;
 `
 
