@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
           </a>
         </StyledIcon>
         <StyledIcon>
-          <a href="https://www.linkedin.com/in/leon-delaimy-606505150/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/leon-delaimy" target="_blank" rel="noreferrer">
             <LinkedInIcon />
           </a>
         </StyledIcon>
