@@ -25,6 +25,10 @@ const routes = [
 ]
 
 const StyledNav = styled(StyledButton)`
+  position: sticky;
+  top: 0;
+  z-index: 99;
+
   .menu {
     display: flex;
     flex-direction: column;
@@ -35,7 +39,6 @@ const StyledNav = styled(StyledButton)`
     color: #fff;
     height: 100%;
     width: 100%;
-    z-index: 30;
     top: 0;
     overflow: hidden;
   }
@@ -67,6 +70,9 @@ export const Nav: React.FC<INavProps> = ({ menu, setMenuOpen }) => {
   })
   return (
     <StyledNav id="nav">
+      <div>
+        <button onClick={() => setMenuOpen(true)}>Menu</button>
+      </div>
       <animated.div className="menu btn-wrapper" style={menuAnimation}>
         <ul>
           {routes.map(({ name, route }, i) => {
