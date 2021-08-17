@@ -11,6 +11,22 @@ export const GlobalStyles = createGlobalStyle<{ theme: ITheme }>`
     font-display: fallback;
   }
 
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.colors.zimaBlue};
+  }
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+  body::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.background};
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.colors.zimaBlue};
+    border: 2px solid ${({ theme }) => theme.colors.zimaBlue};
+    border-radius: 10px;
+  }
+
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.font};
