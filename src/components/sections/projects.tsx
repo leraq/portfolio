@@ -89,7 +89,9 @@ export const Projects: React.FC = () => {
         <div>
           <ProjectsTitle headingLevel="h4">Projects</ProjectsTitle>
           <B2BLink />
-          <p>Share tracks with friends</p>
+          <p>
+            <b>Share tracks with friends</b>
+          </p>
           <p>Full stack web application with React frontend, Golang API & PostgreSQL database</p>
         </div>
       </div>
