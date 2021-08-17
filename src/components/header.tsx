@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
 
   .btn-wrapper {
     display: flex;

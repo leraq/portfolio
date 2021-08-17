@@ -15,7 +15,7 @@ const StyledAbout = styled.section`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
 
   .about-wrapper {
     display: flex;
