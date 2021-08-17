@@ -45,7 +45,7 @@ const StyledExperience = styled.section`
     font-size: 0.75rem;
   }
 
-  @media (min-width: 813px) {
+  @media only screen and (min-width: 813px) {
     p {
       font-size: 1em;
     }
