@@ -44,7 +44,7 @@ const GetInTouchBtn = () => {
       <div className="btn-wrapper">
         <ul>
           <li>
-            <a className="link" href="mailto:ldelaimy1@gmail.com">
+            <a className="link" href="mailto:leondel.coding@gmail.com">
               Get in touch
             </a>
           </li>
