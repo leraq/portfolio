@@ -42,12 +42,12 @@ const StyledExperience = styled.section`
   p {
     padding: 0 30px 0 30px;
     line-height: 1.8;
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 
-  @media only screen and (min-width: 813px) {
+  @media only screen and (min-width: 992px) {
     p {
-      font-size: 1em;
+      font-size: 16px;
     }
   }
 
