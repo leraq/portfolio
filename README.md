@@ -1,8 +1,9 @@
 [![Deploy to Firebase](https://github.com/leraq/portfolio/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/leraq/portfolio/actions/workflows/firebase-hosting-merge.yml)
-
-# Portfolio
-
-My personal website.
+<h1 align="center">
+  Portfolio
+</h1>
+<p align="center">
+My personal website, built using <a href="https://www.gatsbyjs.com">Gatsby</a> and hosted with <a href="https://firebase.google.com">Firebase</a></p>
 
 ### Color Reference
 
