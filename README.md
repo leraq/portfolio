@@ -3,7 +3,7 @@
   Portfolio
 </h1>
 <p align="center">
-  My personal website, written in <a href="https://www.typescriptlang.org">TypeScript</a>, built using <a href="https://www.gatsbyjs.com">Gatsby</a> and hosted with <a href="https://firebase.google.com">Firebase</a></p>
+  My personal website written in <a href="https://reactjs.org">React</a>, built using <a href="https://www.gatsbyjs.com">Gatsby</a> and hosted with <a href="https://firebase.google.com">Firebase</a></p>
 
 ![image](https://user-images.githubusercontent.com/54955669/131023953-98c88533-6253-44a7-b0b5-0d19dc933112.png)
 
